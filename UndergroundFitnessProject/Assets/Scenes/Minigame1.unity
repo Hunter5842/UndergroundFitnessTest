@@ -287,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 5
   spawnedEnemy: {fileID: 418195750575398167, guid: 1646896b42643aa45aa254b73f69dd2d, type: 3}
+  numberOfEnemies: 20
   verticalSpawn: 1
   enemySpeed: -3
 --- !u!1 &1029023287
@@ -540,6 +541,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 532548459}
+    - target: {fileID: 5261304694871598937, guid: 7eb9e47d2af8e4b47a5f7c642d8965c5, type: 3}
+      propertyPath: movementScale
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5261304694871598937, guid: 7eb9e47d2af8e4b47a5f7c642d8965c5, type: 3}
       propertyPath: movementCooldown
       value: 0.15

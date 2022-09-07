@@ -10,9 +10,12 @@ public class S_Minigame1Enemy : MonoBehaviour
     private float spawnVariation = 9;
     //Rigidbody2D body;
     // Start is called before the first frame update
+
+    private float startY;
     void Start()
     {
         transform.position = new Vector3(Random.Range(spawnVariation, -spawnVariation), transform.position.y, 0);
+        startY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -26,6 +29,11 @@ public class S_Minigame1Enemy : MonoBehaviour
         else
         {
             transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+        }
+
+        if(transform.position.y < -10)
+        {
+            transform.position = new Vector3(Random.Range(spawnVariation, -spawnVariation), startY, 0);
         }
     }
 

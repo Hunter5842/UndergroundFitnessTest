@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 532548459}
     - target: {fileID: 5261304694871598937, guid: 7eb9e47d2af8e4b47a5f7c642d8965c5, type: 3}
       propertyPath: movementScale
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5261304694871598937, guid: 7eb9e47d2af8e4b47a5f7c642d8965c5, type: 3}
       propertyPath: movementCooldown

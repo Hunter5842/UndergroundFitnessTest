@@ -682,9 +682,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: S_PlayButtonScript, Assembly-CSharp
-        m_MethodName: PlayButton
+      - m_Target: {fileID: 1714421168}
+        m_TargetAssemblyTypeName: S_LoadScene, Assembly-CSharp
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0793dfac90f8bc744a9262f9ff110c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: HomeDojo
   scene:
     m_Handle: 0
   loadType: 0

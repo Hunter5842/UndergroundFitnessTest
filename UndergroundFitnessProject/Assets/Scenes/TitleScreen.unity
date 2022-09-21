@@ -682,7 +682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1714421168}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: S_PlayButtonScript, Assembly-CSharp
         m_MethodName: PlayButton
         m_Mode: 1
@@ -741,10 +741,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714421163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9afba470218fdb418f37791be477b4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0793dfac90f8bc744a9262f9ff110c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: HomeDojo
+  sceneName: 
+  scene:
+    m_Handle: 0
+  loadType: 0
 --- !u!1 &1972326903
 GameObject:
   m_ObjectHideFlags: 0

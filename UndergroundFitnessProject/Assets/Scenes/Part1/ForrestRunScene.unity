@@ -367,10 +367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedObject: {fileID: 6917024741730462116, guid: 3aef2fd050872ff4aa1fe0d92aa2f7cb, type: 3}
   repeatSpawn: 1
-  spawnAtStart: 1
-  spawnInterval: 3
+  spawnAtStart: 0
+  spawnInterval: 2
   shutdownAfterTime: 1
-  timeUntilShutdown: 30
+  timeUntilShutdown: 10
 --- !u!1 &590159208
 GameObject:
   m_ObjectHideFlags: 0

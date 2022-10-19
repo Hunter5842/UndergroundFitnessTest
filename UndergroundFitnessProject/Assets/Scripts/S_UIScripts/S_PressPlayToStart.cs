@@ -13,7 +13,7 @@ public class S_PressPlayToStart : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void startGame()
+    public void StartGame()
     {
         Time.timeScale = 1;
 

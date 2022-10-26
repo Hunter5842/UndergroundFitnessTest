@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class S_WolfStrike : MonoBehaviour
 {
+    private float speed = 1.5f;
     public int numberOfAttacks;
     
     private int[] attacks;
+    private int[] counterAttacks;
+
+    private int currentCounterAttack = 0;
 
     public Vector3[] attackLocations;
     private Vector3 startLocation;
@@ -18,20 +22,23 @@ public class S_WolfStrike : MonoBehaviour
     private float timeTracker = 0;
     private bool direction = true;
 
+    public GameObject counterAttackButtons;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        counterAttackButtons.SetActive(false);
         attacks = new int[numberOfAttacks];
+        counterAttacks = new int[numberOfAttacks];
+
         startLocation = gameObject.transform.position;
 
         for (int i = 0; i < attacks.Length; i++)
         {
-            attacks[i] = Random.Range(0, 3);
+            attacks[i] = Random.Range(0, attackLocations.Length);
         }
-        attacksLeft = attacks.Length;
-
-        SendAttackData();
+        attacksLeft = attacks.Length - 1;
     }
 
     // Update is called once per frame
@@ -51,7 +58,7 @@ public class S_WolfStrike : MonoBehaviour
     {
         if(direction)
         {
-            timeTracker += Time.deltaTime; //Tracks the time for the lerp
+            timeTracker += Time.deltaTime * speed; //Tracks the time for the lerp
 
 
             if(timeTracker >= 1) // when the lerp reaches or surpasses 1, it changes direction.
@@ -67,8 +74,13 @@ public class S_WolfStrike : MonoBehaviour
             {
                 timeTracker = 0;
                 attacking = false;
+                if (0 == attacksLeft)
+                {
+                    counterAttackButtons.SetActive(true);
+                }
             }
         }
+
         transform.position = Vector3.Lerp(startLocation, attackLocations[attacks[currentAttack]], timeTracker); // this updates the position relative to the location it belongs in. 
     }
 
@@ -80,8 +92,20 @@ public class S_WolfStrike : MonoBehaviour
         attacking = true;
     }
 
-    private void SendAttackData()
+    public void attackSelected(int attackID)
     {
-
+        counterAttacks[currentCounterAttack] = attackID;
+        currentCounterAttack++;
+        if(currentCounterAttack >= counterAttacks.Length)
+        {
+            Debug.Log("Triggered!");
+            counterAttackButtons.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Value Added: " + attackID + ". Current Counter Attack is " + currentCounterAttack + ". Counter Attacks Length is " + counterAttacks.Length);
+        }
+            
+        
     }
 }

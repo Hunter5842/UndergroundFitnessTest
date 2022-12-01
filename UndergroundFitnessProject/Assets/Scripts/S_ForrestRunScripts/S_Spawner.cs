@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_Spawner : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class S_Spawner : MonoBehaviour
     public bool shutdownAfterTime = false;
     public float timeUntilShutdown = 30;
 
-
+    public bool loadSceneOnEnd = true;
+    [SerializeField]
+    public Object nextScene;
 
     private float timeRemaining;
     private float countdown;
@@ -50,7 +53,7 @@ public class S_Spawner : MonoBehaviour
     {
         if(countdown <= 0)
         {
-            Instantiate(spawnedObject, transform.position, transform.rotation);
+            Instantiate(spawnedObject, new Vector2(Random.RandomRange(-5, 5), Random.RandomRange(0, 3)), transform.rotation);
             countdown = spawnInterval;
         }
         else
@@ -75,6 +78,8 @@ public class S_Spawner : MonoBehaviour
     {
         repeatSpawn = false;
         timeRemaining = 0;
+
+        SceneManager.LoadScene(nextScene.name);
 
         //Debug.Log("Deactivated");
     }

@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeDojo.unity
     guid: 336b1f54433ce0a41874dfdd4c6abfee
   - enabled: 1
-    path: Assets/Scenes/Minigame1.unity
+    path: Assets/Scenes/Part2/Minigame1.unity
     guid: c2a6668765cd65f43b62a2febf40afc6
   - enabled: 1
     path: Assets/Scenes/Part1/ForrestRunScene.unity
     guid: 2cfe616a9ee6d9641ae8dcc54445a898
+  - enabled: 1
+    path: Assets/Scenes/Part3/Minigame3.unity
+    guid: 7a419e923d6f8d042b78a167673f1ee5
   m_configObjects: {}

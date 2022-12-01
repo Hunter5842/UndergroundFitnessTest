@@ -507,8 +507,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jog in place, and when you see a branch, chop it! If you see a rock, make
-    a hammer fist! Keep going until you make it through!
+  m_Text: Jog in place, and when you see a branch, duck! If you see a rock, Jump!
+    Keep going until you make it through!
 --- !u!222 &119515801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -605,6 +605,8 @@ MonoBehaviour:
   spawnInterval: 3
   shutdownAfterTime: 1
   timeUntilShutdown: 30
+  loadSceneOnEnd: 1
+  nextScene: {fileID: 102900000, guid: c2a6668765cd65f43b62a2febf40afc6, type: 3}
 --- !u!1 &590159208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1086,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Follow the Sensei's instructions to get through the forrest!
+  m_Text: Follow the Sensei's instructions to get through the forest! Dodge the rocks
+    and branches!
 --- !u!222 &1365654044
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class S_Minigame1Controller : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class S_Minigame1Controller : MonoBehaviour
 
     public Text text;
     private bool canMove = true;
+
+    private float deathClock = 3;
     
 
     //private BoxCollider2D collider;
@@ -34,6 +37,10 @@ public class S_Minigame1Controller : MonoBehaviour
         if (canMove)
         {
             checkMovement();
+        }
+        else
+        {
+            Death();
         }
         
     }
@@ -65,15 +72,31 @@ public class S_Minigame1Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
 
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Hit by enemy!");
-            Time.timeScale = 0;
+            //Debug.Log("Hit by enemy!");
+            //gameObject.SetActive(false);
             text.text = "You Lose!";
             text.color = Color.red;
             canMove = false;
+            //Death();
         }
+    }
+
+    private void Death()
+    {
+        if (deathClock <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            //Debug.Log("Called");
+            deathClock -= Time.deltaTime;
+        }
+        
+        
     }
 }

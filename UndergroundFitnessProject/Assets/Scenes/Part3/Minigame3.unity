@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ec8d46ec8acd4794654d568af92b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfAttacks: 3
+  numberOfAttacks: 5
   attackLocations:
   - {x: -3, y: 0, z: 0}
   - {x: 3, y: 0, z: 0}

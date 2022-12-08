@@ -211,7 +211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8086291928611287375, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
       propertyPath: m_Text
-      value: Story Prompt
+      value: 'Climb the mountan to get to the cave! '
       objectReference: {fileID: 0}
     - target: {fileID: 8086291928986657880, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

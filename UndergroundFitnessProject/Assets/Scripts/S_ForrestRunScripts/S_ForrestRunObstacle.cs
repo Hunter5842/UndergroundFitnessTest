@@ -28,6 +28,8 @@ public class S_ForrestRunObstacle : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = obstacles[Random.Range(0, obstacles.Length - 1)].sprite;
         transform.localScale = scale;
+
+        transform.rotation = new Quaternion(0, 0, Random.Range(-45, 45), transform.rotation.w);
     }
 
     // Update is called once per frame

@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d1412883de509b42ab98a75a96c174d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45c8bcfa49d6b3645bd414e174b0be0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - name: Rock
-    sprite: {fileID: 21300000, guid: ef95c0662feb0ac4fbd1b958f4820853, type: 3}
+    sprite: {fileID: 21300000, guid: 06acd4cda291a2b4da159a254d343393, type: 3}
   - name: Branch
-    sprite: {fileID: 21300000, guid: 1d1412883de509b42ab98a75a96c174d, type: 3}
+    sprite: {fileID: 21300000, guid: 45c8bcfa49d6b3645bd414e174b0be0c, type: 3}
   - name: Wolf
     sprite: {fileID: 0}
   timeOnScreen: 1.5

@@ -9,6 +9,8 @@ public class S_Minigame1Spawner : MonoBehaviour
     public GameObject spawnedEnemy; //Select the enemy you want to spawn. Must have the S_Minigame1Enemy script. 
     public int numberOfEnemies = 20;
 
+    public GameObject ui;
+
     [Header("Will load a scene on end")]
     public Object scene;
 
@@ -24,11 +26,18 @@ public class S_Minigame1Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void SpawnEnemies()
+    {
+        Time.timeScale = 1;
         spawnRate = 1 / spawnRate; //Makes it so the larger the number, the faster it spawns. 
         for(int i = 0; i < numberOfEnemies; i++)
         {
             StartCoroutine(SpawnEnemy(spawnRate * i, spawnedEnemy ));//Spawns the enemies 
         }
+        ui.SetActive(false);
         //NextStage();
     }
 

@@ -53,7 +53,7 @@ public class S_Spawner : MonoBehaviour
     {
         if(countdown <= 0)
         {
-            Instantiate(spawnedObject, new Vector2(Random.RandomRange(-5, 5), Random.RandomRange(0, 3)), transform.rotation);
+            Instantiate(spawnedObject, new Vector2(Random.Range(-5, 5), Random.Range(0, 3)), transform.rotation);
             countdown = spawnInterval;
         }
         else

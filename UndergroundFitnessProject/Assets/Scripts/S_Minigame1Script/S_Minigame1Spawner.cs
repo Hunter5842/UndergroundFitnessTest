@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class S_Minigame1Spawner : MonoBehaviour
 {
+    public float colorChangeRate = 50;
     public float spawnRate = 1, gameLength = 30;
     public GameObject spawnedEnemy; //Select the enemy you want to spawn. Must have the S_Minigame1Enemy script. 
     public int numberOfEnemies = 20;
+
+    public SpriteRenderer background;
 
     public GameObject ui;
 
@@ -44,6 +47,8 @@ public class S_Minigame1Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Color color = new Color(Time.deltaTime/colorChangeRate, Time.deltaTime/colorChangeRate, Time.deltaTime/colorChangeRate, 1);
+        background.color += color;
         if(gameLength <= 0)
         {
             NextStage();
@@ -67,10 +72,11 @@ public class S_Minigame1Spawner : MonoBehaviour
 
         try
         {
-            SceneManager.LoadScene(scene.name);
+            SceneManager.LoadScene("Minigame3");
         }
         catch
         {
+            
             Debug.Log("Error! Could not load level!");
         }
         

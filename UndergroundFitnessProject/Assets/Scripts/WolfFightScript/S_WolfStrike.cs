@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class S_WolfStrike : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class S_WolfStrike : MonoBehaviour
     private bool direction = true;
 
     public GameObject counterAttackButtons;
+
+    public GameObject winScreen;
+    
+    public Text starsText;
 
 
     // Start is called before the first frame update
@@ -59,8 +64,6 @@ public class S_WolfStrike : MonoBehaviour
         if(direction)
         {
             timeTracker += Time.deltaTime * speed; //Tracks the time for the lerp
-
-
             if(timeTracker >= 1) // when the lerp reaches or surpasses 1, it changes direction.
             {
                 timeTracker = 1;
@@ -80,7 +83,6 @@ public class S_WolfStrike : MonoBehaviour
                 }
             }
         }
-
         transform.position = Vector3.Lerp(startLocation, attackLocations[attacks[currentAttack]], timeTracker); // this updates the position relative to the location it belongs in. 
     }
 
@@ -98,14 +100,33 @@ public class S_WolfStrike : MonoBehaviour
         currentCounterAttack++;
         if(currentCounterAttack >= counterAttacks.Length)
         {
-            Debug.Log("Triggered!");
             counterAttackButtons.SetActive(false);
+            winScreen.SetActive(true);
+            if(compareAttacks())
+            {
+                starsText.text = "You got 3 Stars!";
+            }
+            else
+            {
+                starsText.text = "You got 2 Stars!";
+            }
+            gameObject.SetActive(false);
         }
         else
         {
             Debug.Log("Value Added: " + attackID + ". Current Counter Attack is " + currentCounterAttack + ". Counter Attacks Length is " + counterAttacks.Length);
         }
-            
-        
+    }
+
+    public bool compareAttacks()
+    {
+        for(int i = attacks.Length - 1; i >= 0; i--)
+        {
+            if(attacks[i] != counterAttacks[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

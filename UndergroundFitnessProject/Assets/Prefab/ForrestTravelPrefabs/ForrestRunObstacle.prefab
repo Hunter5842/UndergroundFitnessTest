@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6917024741730462116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,5 +103,5 @@ MonoBehaviour:
   - name: Wolf
     sprite: {fileID: 0}
   timeOnScreen: 1.5
-  endScale: 7
+  endScale: 3
   scaleSpeed: 10

@@ -35,8 +35,6 @@ public class S_Spawner : MonoBehaviour
         {
             countdown = spawnInterval;
         }
-
-        
     }
 
     // Update is called once per frame
@@ -76,10 +74,11 @@ public class S_Spawner : MonoBehaviour
 
     public void Deactivate()
     {
+        SceneManager.LoadScene("Minigame1");
         repeatSpawn = false;
         timeRemaining = 0;
 
-        SceneManager.LoadScene(nextScene.name);
+        
 
         //Debug.Log("Deactivated");
     }

@@ -22,7 +22,6 @@ public class S_Minigame1Controller : MonoBehaviour
     void Awake()
     {
         storedMovementCooldown = movementCooldown;
-        movementScale = movementScale / 100;
     }
 
     private void Start()
@@ -49,23 +48,23 @@ public class S_Minigame1Controller : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") == 1 && transform.position.x < 9)
         {
-            transform.position += new Vector3(movementScale, 0, 0);
+            transform.position += new Vector3(movementScale * Time.deltaTime, 0, 0);
             //movementCooldown = storedMovementCooldown;
         }
         else if (Input.GetAxisRaw("Horizontal") == -1 && transform.position.x > -9)
         {
-            transform.position -= new Vector3(movementScale, 0, 0);
+            transform.position -= new Vector3(movementScale* Time.deltaTime, 0, 0);
             //movementCooldown = storedMovementCooldown;
         }
 
         if (Input.GetAxisRaw("Vertical") == 1 && transform.position.y < 5)
         {
-            transform.position += new Vector3(0, movementScale, 0);
+            transform.position += new Vector3(0, movementScale* Time.deltaTime, 0);
             //movementCooldown = storedMovementCooldown;
         }
         else if (Input.GetAxisRaw("Vertical") == -1 && transform.position.y > -5)
         {
-            transform.position -= new Vector3(0, movementScale, 0);
+            transform.position -= new Vector3(0, movementScale* Time.deltaTime, 0);
             //movementCooldown = storedMovementCooldown;
         }
     }

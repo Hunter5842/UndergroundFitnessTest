@@ -259,7 +259,7 @@ MonoBehaviour:
   spawnAtStart: 1
   spawnInterval: 3
   shutdownAfterTime: 1
-  timeUntilShutdown: 30
+  timeUntilShutdown: 20
   loadSceneOnEnd: 1
   nextScene: {fileID: 102900000, guid: c2a6668765cd65f43b62a2febf40afc6, type: 3}
 --- !u!1 &590159208
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -599,10 +599,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 942760014}
     m_Modifications:
+    - target: {fileID: 8086291928611287374, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086291928611287374, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086291928611287374, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8086291928611287375, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
       propertyPath: m_Text
-      value: Follow the Sensei's instructions to get through the forest! Dodge the
-        rocks and branches!
+      value: You start to travel to the village to recieve your mission from the
+        moon clan. Make your way through the forrest and dodge any obstacles in your
+        way!
       objectReference: {fileID: 0}
     - target: {fileID: 8086291928986657887, guid: 61ed64ceda2a1614b94ca209b590f9a2, type: 3}
       propertyPath: canvas

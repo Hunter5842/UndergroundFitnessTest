@@ -1,3 +1,2 @@
 # UndergroundFitnessTest
-test
-This is a bit weird
+This is the underground fitness project! 

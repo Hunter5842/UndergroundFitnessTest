@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class S_Minigame1Spawner : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class S_Minigame1Spawner : MonoBehaviour
     public SpriteRenderer background;
 
     public GameObject ui;
+
+    public Text timer;
+
+    public GameObject winUI;
 
     [Header("Will load a scene on end")]
     public Object scene;
@@ -51,12 +56,16 @@ public class S_Minigame1Spawner : MonoBehaviour
         background.color += color;
         if(gameLength <= 0)
         {
-            NextStage();
+            gameLength = 0;
+            winUI.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
             gameLength -= Time.deltaTime;
         }
+
+        timer.text = "Time Left: " + gameLength.ToString();
     }
 
     private IEnumerator SpawnEnemy(float interval, GameObject enemy)
@@ -67,7 +76,7 @@ public class S_Minigame1Spawner : MonoBehaviour
         newEnemy.GetComponent<S_Minigame1Enemy>().SetUp(verticalSpawn, enemySpeed); //A function I made to pass on some variables into the newly spawned enemies.
     }
 
-    private void NextStage()
+    public void NextStage()
     {
 
         try

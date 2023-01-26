@@ -12,6 +12,8 @@ public class S_Spawner : MonoBehaviour
     public bool shutdownAfterTime = false;
     public float timeUntilShutdown = 30;
 
+    public GameObject winUI;
+
     public bool loadSceneOnEnd = true;
     [SerializeField]
     public Object nextScene;
@@ -74,7 +76,8 @@ public class S_Spawner : MonoBehaviour
 
     public void Deactivate()
     {
-        SceneManager.LoadScene("Minigame1");
+        //SceneManager.LoadScene("Minigame1");
+        winUI.SetActive(true);
         repeatSpawn = false;
         timeRemaining = 0;
 

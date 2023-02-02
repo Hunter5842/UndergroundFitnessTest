@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0793dfac90f8bc744a9262f9ff110c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TitleScreen
+  sceneName: WinScreen
   scene:
     m_Handle: 0
   loadType: 0
@@ -2233,7 +2233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return to Title
+  m_Text: Next
 --- !u!222 &2089989734
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class S_Spawner : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class S_Spawner : MonoBehaviour
     public float timeUntilShutdown = 30;
 
     public GameObject winUI;
+
+    public Text timer;
 
     public bool loadSceneOnEnd = true;
     [SerializeField]
@@ -47,6 +50,8 @@ public class S_Spawner : MonoBehaviour
             Spawn();
         }
         //Debug.Log(timeRemaining);
+
+        timer.text = "Time Remaining: " + (int)timeRemaining;
     }
 
     private void Spawn()
